@@ -5,14 +5,39 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Vyšehradská odysea | Zasviť</title>
 		<meta name="color-scheme" content="light dark" />
-		<link rel="stylesheet" href="../style.css" />
+		<link rel="shortcut icon" href="../icon.png" />
+		<link href="../bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+		<script src="../bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
+		<script>
+			const media = window.matchMedia('(prefers-color-scheme: dark)')
+			const handleMedia = () => {
+				if (media.matches) {
+					document.documentElement.setAttribute('data-bs-theme', 'dark')
+				} else {
+					document.documentElement.setAttribute('data-bs-theme', 'light')
+				}
+			}
+			handleMedia()
+			media.addEventListener('change', handleMedia)
+		</script>
 	</head>
 	<body>
-		<div class="content">
+		<div class="container my-5">
 			<h1>Vyšehradská odysea</h1>
 			<p>2021</p>
-			<img src="plakat.jpg" alt="plakát" />
-			<ul>
+			<img
+				src="plakat.jpg"
+				alt="plakát"
+				width="2244"
+				height="3425"
+				class="img-fluid"
+			/>
+			<ul class="mt-3">
+				<li>
+					<a href="https://www.youtube.com/watch?v=AKDQKUVyqOI"
+						>Videodokument</a
+					>
+				</li>
 				<li>
 					<a
 						href="https://www.svataludmila.cz/akce/videomapping-vysehradska-odyssea"
