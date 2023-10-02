@@ -22,6 +22,40 @@
 		</script>
 	</head>
 	<body>
+		<div class="modal fade" tabindex="-1" id="exampleModal">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Zapoj se</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						<p>
+							V přestávkách během promítání na budovu Rudolfina se můžete
+							zapojit i vy, diváci. Oživte videomapping poletujícími motýly.
+						</p>
+					</div>
+					<div class="modal-footer">
+						<a href="https://ty.zasvit.cz" class="btn btn-primary"
+							>Zapojit se</a
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="module">
+			const exampleModal = new bootstrap.Modal(
+				document.getElementById('exampleModal'),
+				{},
+			)
+			exampleModal.show()
+		</script>
+
 		<div class="mb-5">
 			<div class="p-5 text-center bg-body-tertiary">
 				<div class="container py-5">
@@ -37,16 +71,26 @@
 						Videomappingy pod vedením
 						<a href="https://cechova.zasvit.cz/">Zdeňky Čechové</a>.
 					</p>
-					<div class="d-inline-flex gap-2 mb-3">
+					<div
+						class="d-inline-flex flex-wrap justify-content-center gap-2 mb-3"
+					>
+						<button
+							type="button"
+							class="d-inline-flex align-items-center btn btn-primary btn-lg px-4"
+							data-bs-toggle="modal"
+							data-bs-target="#exampleModal"
+						>
+							Zapoj se
+						</button>
 						<a
 							href="https://www.youtube.com/@zasvit-cz"
-							class="d-inline-flex align-items-center btn btn-primary btn-lg px-4"
+							class="d-inline-flex align-items-center btn btn-secondary btn-lg px-4"
 						>
 							YouTube
 						</a>
 						<a
 							href="https://www.facebook.com/zasvit.cz"
-							class="d-inline-flex align-items-center btn btn-primary btn-lg px-4"
+							class="d-inline-flex align-items-center btn btn-secondary btn-lg px-4"
 						>
 							Facebook
 						</a>
