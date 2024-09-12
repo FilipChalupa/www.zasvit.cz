@@ -20,6 +20,24 @@
 			handleMedia()
 			media.addEventListener('change', handleMedia)
 		</script>
+		<style>
+			.sponsors {
+				padding: 0;
+				margin: 0;
+				display: flex;
+				gap: 1em;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			.sponsors li {
+				list-style: none;
+				padding: 0;
+			}
+			.sponsors img {
+				width: auto;
+				height: 6rem;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container my-5">
@@ -32,6 +50,18 @@
 				height="1626"
 				class="img-fluid"
 			/>
+			<h3>Poděkování</h3>
+			<ul class="sponsors">
+				<li>
+					<a href="https://www.kudyznudy.cz/">
+						<img
+							src="sponsors/kudy-z-nudy.png"
+							alt="Kudy z nudy"
+							height="500"
+							width="2264"
+					/></a>
+				</li>
+			</ul>
 		</div>
 	</body>
 </html>
