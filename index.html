@@ -36,7 +36,7 @@
 					</div>
 					<div class="modal-body">
 						<p>
-							V přestávkách během promítání na budovu Rudolfina se můžete
+							V přestávkách během promítání na budovu Betlémské kaple se můžete
 							zapojit i vy, diváci. Oživte videomapping poletujícími motýly.
 						</p>
 					</div>
@@ -48,13 +48,17 @@
 				</div>
 			</div>
 		</div>
-		<!-- <script type="module">
-			const exampleModal = new bootstrap.Modal(
-				document.getElementById('exampleModal'),
-				{},
-			)
-			exampleModal.show()
-		</script> -->
+		<script type="module">
+			const showModalOnLoad = true // Change this as needed
+			if (showModalOnLoad) {
+				const exampleModal = new bootstrap.Modal(
+					document.getElementById('exampleModal'),
+					{},
+				)
+				document.getElementById('showModalButton').classList.remove('d-none')
+				exampleModal.show()
+			}
+		</script>
 
 		<div class="mb-5">
 			<div class="p-5 text-center bg-body-tertiary">
@@ -74,14 +78,16 @@
 					<div
 						class="d-inline-flex flex-wrap justify-content-center gap-2 mb-3"
 					>
-						<!-- <button
+						<button
 							type="button"
-							class="d-inline-flex align-items-center btn btn-primary btn-lg px-4"
+							class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 d-none"
+							hidden
 							data-bs-toggle="modal"
 							data-bs-target="#exampleModal"
+							id="showModalButton"
 						>
 							Zapoj se
-						</button> -->
+						</button>
 						<a
 							href="https://www.youtube.com/@zasvit-cz"
 							class="d-inline-flex align-items-center btn btn-secondary btn-lg px-4"
@@ -101,11 +107,12 @@
 		<div class="container">
 			<h2>Naplánované</h2>
 			<ul>
+				<li><a href="husitska-odysea/">Husitská odysea</a> (3. 10. 2024)</li>
 				<li>
-					<a href="husitska-odysea/">Husitská odysea</a> (3. 10. 2024)
-				</li>
-				<li>
-					<a href="cedar-rapids/">Cedar Rapids | National Czech and Slovak Museum</a> (jaro 2025)
+					<a href="cedar-rapids/"
+						>Cedar Rapids | National Czech and Slovak Museum</a
+					>
+					(jaro 2025)
 				</li>
 			</ul>
 		</div>
